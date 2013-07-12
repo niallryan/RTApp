@@ -1,0 +1,20 @@
+<div>
+
+	<div class="navigation">
+    	<p>Click on a Movie Title to find out more information about it. Click More to load more movies.</p>
+    	<button ng-click="loadNextPage()">More</button>
+    	<p>Page: {{ page }}</p>
+    </div>
+    
+    <div class="grid_10">
+		<div ng-repeat="movie in list.movies" class="movie grid_3">
+			<img ng-src="{{ movie.posters.profile }}"> <br />
+	        <a href="#/movies/{{movie.id}}">{{ movie.title }}</a>
+	    </div>
+	</div>
+
+	<div class="extra_button">
+		<button ng-click="loadNextPage()">More</button>
+	</div>
+
+</div>
